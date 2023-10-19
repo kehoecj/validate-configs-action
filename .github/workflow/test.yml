@@ -1,0 +1,18 @@
+---
+name: Validate Configs Action Test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+steps:
+  - uses: actions/checkout@v4
+  - name: Test Defaults
+    uses: kehoecj/validate-configs-action@v1
+    with:
+      exlude-dirs: failing
+      search-path: test
+
