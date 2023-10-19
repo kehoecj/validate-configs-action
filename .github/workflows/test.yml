@@ -13,6 +13,6 @@ jobs:
       - name: Test Defaults
         uses: kehoecj/validate-configs-action@v1
         with:
-          exlude-dirs: failing
+          exclude-dirs: failing
           search-path: test
 
