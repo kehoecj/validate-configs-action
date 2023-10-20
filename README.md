@@ -1,8 +1,6 @@
 # Validate Configs Github Action
 
-Github Action to validate your config files using the [config-file-validator](https://github.com/Boeing/config-file-validator)
-
-The config-file-validator will recursively scan the provided search path for the following configuration file types:
+:octocat: Github Action to validate your config files using the [config-file-validator](https://github.com/Boeing/config-file-validator). The config-file-validator will recursively scan the provided search path for the following configuration file types:
 
 * XML
 * JSON
