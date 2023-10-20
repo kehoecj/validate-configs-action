@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Entrypoint wrapper for the validator executable
+# Maps the string of inputs to CLI arguments
+
 set -e
 
 SEARCH_PATH=$1
