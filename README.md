@@ -16,10 +16,10 @@ Each file will get validated for the correct syntax and the results collected in
 
 | Input              | Required | Default Value | Description |
 | ------------------ | -------- | ------------- | ----------- |
-| search-path        | false    | `.`         | The path that will be recursively searched for configuration files |
-| exclude-dirs       | false    | ` `          | A comma-separated list of subdirectories to exclude from validation |
-| exclude-file-types | false    | ` `          | A comma-separated list of file extensions to exclude. Possible values are `xml`, `ini`, `yaml`, `yml`, `toml`, and `json` |
-| reporter           | false    | `standard`   | Format of the report printed to stdout. Options are `standard` and `json` |
+| search-path        | false    | `"."`         | The path that will be recursively searched for configuration files |
+| exclude-dirs       | false    | `""`          | A comma-separated list of subdirectories to exclude from validation |
+| exclude-file-types | false    | `""`          | A comma-separated list of file extensions to exclude. Possible values are `xml`, `ini`, `yaml`, `yml`, `toml`, and `json` |
+| reporter           | false    | `"standard"`   | Format of the report printed to stdout. Options are `standard` and `json` |
 
 
 ## Outputs
