@@ -35,7 +35,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v2
+      - uses: kehoe/validate-configs-action@v1
 ```
 
 ### Custom Search Path
@@ -45,7 +45,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v2
+      - uses: kehoe/validate-configs-action@v1
         with:
             search-path: ./project/configs
 ```
@@ -57,7 +57,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v2
+      - uses: kehoe/validate-configs-action@v1
         with:
             exclude-dirs: "tests,vendor"
 ```
@@ -69,7 +69,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v2
+      - uses: kehoe/validate-configs-action@v1
         with:
             exclude-file-types: "json,xml"
 ```
@@ -81,7 +81,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v2
+      - uses: kehoe/validate-configs-action@v1
         with:
             reporter: "json"
 ```
