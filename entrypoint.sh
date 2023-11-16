@@ -5,5 +5,5 @@
 
 set -e
 
-SEARCH_PATH=$1
-validator --exclude-dirs=$2 --exclude-file-types=$3 --reporter=$4 $SEARCH_PATH
+SEARCH_PATHS=$1
+validator --exclude-dirs=$2 --exclude-file-types=$3 --depth=$4 --reporter=$5 ${SEARCH_PATHS}

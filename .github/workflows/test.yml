@@ -14,5 +14,5 @@ jobs:
         uses: kehoecj/validate-configs-action@v1
         with:
           exclude-dirs: failing
-          search-path: test
+          search-paths: test/good.ini test/good.json test/good.toml test/good.xml test/good.yaml
 
