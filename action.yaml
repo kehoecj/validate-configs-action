@@ -4,8 +4,8 @@ author: 'kehoecj'
 description: 'Github Action to validate config files in a repo using the config-file-validator tool'
 
 inputs:
-  search-path:
-    description: 'The path to scan for configuration files'
+  search-paths:
+    description: 'A space separated list of directories or files to scan'
     required: false
     default: '.'
   exclude-dirs:
@@ -14,6 +14,10 @@ inputs:
     default: ""
   exclude-file-types:
     description: 'A comman separated list of file types to exclude. Example: "csv,json"'
+    required: false
+    default: ""
+  depth:
+    description: 'An integer value limiting the depth of recursion for the search paths. For example, setting depth to 0 would disable recursion'
     required: false
     default: ""
   reporter:
@@ -25,9 +29,10 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.search-path }}
+    - ${{ inputs.search-paths }}
     - ${{ inputs.exclude-dirs }}
     - ${{ inputs.exclude-file-types }}
+    - ${{ inputs.depth }}
     - ${{ inputs.reporter }}
 
 branding:
