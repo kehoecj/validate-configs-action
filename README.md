@@ -1,5 +1,14 @@
 # Validate Configs Github Action
 
+<p>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/kehoecj/validate-configs-action">
+    <img src="https://api.scorecard.dev/projects/github.com/kehoecj/validate-configs-action/badge" alt="OpenSSF Scorecard">
+  </a>
+  <a href="https://opensource.org/licenses/Apache-2.0">
+    <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2 License">
+  </a>
+</p>
+
 :octocat: Github Action to validate your config files using the [config-file-validator](https://github.com/Boeing/config-file-validator). The config-file-validator will recursively scan the provided search path for the following configuration file types:
 
 * Apple PList XML
