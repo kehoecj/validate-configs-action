@@ -138,6 +138,6 @@ jobs:
     steps:
       - uses: kehoe/validate-configs-action@v3
         with:
-            reporter: "json"
+            group-by: "pass-fail"
 ```
 
