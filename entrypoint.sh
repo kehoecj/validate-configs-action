@@ -34,4 +34,7 @@ if [ -n "$GROUP_BY" ]; then
   CMD="$CMD --group-by=$GROUP_BY"
 fi
 
-( "${CMD}" "${SEARCH_PATHS}" )
+# add search paths
+CMD="$CMD $SEARCH_PATHS"
+
+( ${CMD} )
