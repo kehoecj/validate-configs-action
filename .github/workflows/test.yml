@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Test Defaults
-        uses: kehoecj/validate-configs-action@v1
+        uses: kehoecj/validate-configs-action@v2
         with:
           exclude-dirs: failing
           search-paths: test/good.ini test/good.json test/good.toml test/good.xml test/good.yaml
