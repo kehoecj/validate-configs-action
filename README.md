@@ -4,13 +4,16 @@
 
 * Apple PList XML
 * CSV
+* ENV
 * HCL
+* HOCON
 * INI
 * JSON
 * Properties
 * TOML
 * XML
 * YAML
+
 
 
 Each file will get validated for the correct syntax and the results collected into a report showing the path of the file and if it is invalid or valid. If the file is invalid an error will be displayed along with the line number and column where the error ocurred. By default the `$GITHUB_WORKDIR` is scanned.
@@ -21,11 +24,12 @@ Each file will get validated for the correct syntax and the results collected in
 
 | Input              | Required | Default Value | Description |
 | ------------------ | -------- | ------------- | ----------- |
-| search-paths        | false    | `"."`         | The path that will be recursively searched for configuration files |
+| search-paths       | false    | `"."`         | The path that will be recursively searched for configuration files |
 | exclude-dirs       | false    | `""`          | A comma-separated list of subdirectories to exclude from validation |
 | exclude-file-types | false    | `""`          | A comma-separated list of file extensions to exclude. Possible values are `xml`, `ini`, `yaml`, `yml`, `toml`, and `json` |
 | depth              | false    | `""`          | An integer value limiting the depth of recursion for the search paths. For example, setting depth to 0 would disable recursion |
-| reporter           | false    | `"standard"`   | Format of the report printed to stdout. Options are `standard` and `json` |
+| reporter           | false    | `"standard"`  | Format of the report printed to stdout. Options are `standard` and `json` |
+| group-by           | false    | `""`          | Group output by filetype, directory, pass-fail |
 
 
 ## Outputs
@@ -41,7 +45,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v1
+      - uses: kehoe/validate-configs-action@v3
 ```
 
 ### Custom search path
@@ -51,7 +55,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v1
+      - uses: kehoe/validate-configs-action@v3
         with:
             search-path: ./project/configs
 ```
@@ -63,7 +67,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v1
+      - uses: kehoe/validate-configs-action@v3
         with:
             search-path: ./project/configs ./project/devops
 ```
@@ -75,7 +79,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v1
+      - uses: kehoe/validate-configs-action@v3
         with:
             exclude-dirs: "tests,vendor"
 ```
@@ -87,7 +91,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v1
+      - uses: kehoe/validate-configs-action@v3
         with:
             exclude-file-types: "json,xml"
 ```
@@ -99,7 +103,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v1
+      - uses: kehoe/validate-configs-action@v3
         with:
             depth: 0
 ```
@@ -111,7 +115,20 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v1
+      - uses: kehoe/validate-configs-action@v3
         with:
             reporter: "json"
 ```
+
+### Group By Pass/Fail
+
+```yml
+jobs:
+  validate-config-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kehoe/validate-configs-action@v3
+        with:
+            reporter: "json"
+```
+

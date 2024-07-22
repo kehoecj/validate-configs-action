@@ -24,6 +24,10 @@ inputs:
     description: 'Format of the printed report. Options are standard and json (default "standard")'
     required: false
     default: "standard"
+  group-by:
+    description: A comman separated list of how to group the output. Options are file type, directory, or pass-fail.
+    required: false
+    default: ""
 
 runs:
   using: 'docker'
@@ -34,6 +38,7 @@ runs:
     - ${{ inputs.exclude-file-types }}
     - ${{ inputs.depth }}
     - ${{ inputs.reporter }}
+    - ${{ inputs.group-by }}
 
 branding:
   color: 'blue'
