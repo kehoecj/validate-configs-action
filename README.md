@@ -4,6 +4,9 @@
   <a href="https://scorecard.dev/viewer/?uri=github.com/kehoecj/validate-configs-action">
     <img src="https://api.scorecard.dev/projects/github.com/kehoecj/validate-configs-action/badge" alt="OpenSSF Scorecard">
   </a>
+  <a href="https://www.bestpractices.dev/projects/9239">
+    <img src="https://www.bestpractices.dev/projects/9239/badge">
+  </a>
   <a href="https://opensource.org/licenses/Apache-2.0">
     <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2 License">
   </a>
