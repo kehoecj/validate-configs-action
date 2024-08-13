@@ -16,6 +16,7 @@
 
 * Apple PList XML
 * CSV
+* EDITORCONFIG
 * ENV
 * HCL
 * HOCON
@@ -57,7 +58,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v3
+      - uses: kehoe/validate-configs-action@v4
 ```
 
 ### Custom search path
@@ -67,7 +68,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v3
+      - uses: kehoe/validate-configs-action@v4
         with:
             search-path: ./project/configs
 ```
@@ -79,7 +80,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v3
+      - uses: kehoe/validate-configs-action@v4
         with:
             search-path: ./project/configs ./project/devops
 ```
@@ -91,7 +92,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v3
+      - uses: kehoe/validate-configs-action@v4
         with:
             exclude-dirs: "tests,vendor"
 ```
@@ -103,7 +104,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v3
+      - uses: kehoe/validate-configs-action@v4
         with:
             exclude-file-types: "json,xml"
 ```
@@ -115,7 +116,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v3
+      - uses: kehoe/validate-configs-action@v4
         with:
             depth: 0
 ```
@@ -127,7 +128,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v3
+      - uses: kehoe/validate-configs-action@v4
         with:
             reporter: "json"
 ```
@@ -139,7 +140,7 @@ jobs:
   validate-config-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: kehoe/validate-configs-action@v3
+      - uses: kehoe/validate-configs-action@v4
         with:
             group-by: "pass-fail"
 ```
